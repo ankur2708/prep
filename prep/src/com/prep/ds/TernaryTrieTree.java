@@ -1,4 +1,4 @@
-package com.prep.algos;
+package com.prep.ds;
 
 import java.util.LinkedList;
 import java.util.List;

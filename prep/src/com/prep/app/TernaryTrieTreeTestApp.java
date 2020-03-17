@@ -1,6 +1,6 @@
 package com.prep.app;
 
-import com.prep.algos.TernaryTrieTree;
+import com.prep.ds.TernaryTrieTree;
 
 public class TernaryTrieTreeTestApp {
 	
