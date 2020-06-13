@@ -1,5 +1,11 @@
 package com.prep.algos;
-
+/**
+ * Quick Union find with Path compression and union optimization
+ * Union-- O(log n)
+ * Find -- O(log n)
+ * @author ankur
+ *
+ */
 public class UnionFind {
 
 	private int[] points;
