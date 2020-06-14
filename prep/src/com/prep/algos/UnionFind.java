@@ -19,6 +19,10 @@ public class UnionFind {
 		{
 			points[i] = i;
 		}
+		for(int i = 0; i < numOfPoints; i++)
+		{
+			size[i] = 1;
+		}
 	}
 	
 	public boolean connected(int point1, int point2)
@@ -36,9 +40,15 @@ public class UnionFind {
 		{
 			return;
 		}
-		if(size[root1] >= size[root2])
+		if(size[root1] > size[root2]) // bigger tree becomes the parent of smaller tree
+		{
+			points[root2] = root1;
+			size[root1] += size[root2];
+		}
+		else
 		{
 			points[root1] = root2;
+			size[root2] += size[root1];
 		}
 		
 	}

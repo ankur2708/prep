@@ -14,7 +14,8 @@ public class UnionFindApp {
 		uf.union(1, 4);
 		uf.union(7, 9);
 		
-		System.out.println(uf.connected(2, 4));
+		System.out.println(uf.connected(4, 1));
+		System.out.println(uf.connected(7, 2));
 		
 		
 	}
