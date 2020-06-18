@@ -60,6 +60,32 @@ public class LinkedListApp {
 		System.out.println();
 		System.out.println("-------------------");
 		
+		
+		
+		mylist.pop();
+		mylist.dequeue();
+		mylist.pop();
+		mylist.pop();
+		mylist.dequeue();
+		
+		for(Integer i : mylist)
+		{
+			System.out.print(i + "-->");
+		}
+		System.out.println();
+		System.out.println("-------------------");
+		
+		mylist.enqueue(10);
+		mylist.enqueue(20);
+		mylist.push(30);
+		
+		for(Integer i : mylist)
+		{
+			System.out.print(i + "-->");
+		}
+		System.out.println();
+		System.out.println("-------------------");
+		
 	}
 
 }
