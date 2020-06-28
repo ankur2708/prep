@@ -1,2 +1,2 @@
 # prep
-project contains code related to graph, graph algos and its processing.
+project contains code related to DS, algos, graph, graph algos and graph processing.
