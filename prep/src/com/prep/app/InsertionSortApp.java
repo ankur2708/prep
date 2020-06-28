@@ -27,6 +27,7 @@ public class InsertionSortApp {
 		}
 		System.out.println();
 		
+		
 	}
 
 }
