@@ -24,7 +24,7 @@ public class WebCrawler {
 	{
 		//Time out for URL connection, 1000 ms
 		System.setProperty("sun.net.client.defaultConnectTimeout", "1000");
-		//Time out for read after connection established, 5000 msec
+		//Time out for read after connection established, 5000 msecs
 		System.setProperty("sun.net.client.defaultReadTimeout",    "5000");
 		
 		List<String> points = new LinkedList<String>();
