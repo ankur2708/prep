@@ -1,0 +1,12 @@
+*****Memory size for each data types in java**********
+boolean: 1 byte
+char: 2 bytes
+int: 4 bytes
+long: 8 bytes
+decimal: 8 bytes
+Object Reference: 8 bytes
+Object padding: 16 bytes
+Object Size after adding up it members has to be in multiplication of 8 bytes
+Array: 24 bytes [+ each element in array]
+
+
