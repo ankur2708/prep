@@ -28,21 +28,19 @@ public class BFS {
 	{
 		LinkedList<Integer> points = new LinkedList<Integer>();
 		points.add(startPoint); //adds in the tail
-		
+		isVisited[startPoint] = true;
 		while(!points.isEmpty())
 		{
 			Integer expandPoint = points.remove(); //removes from the head
-			if(!isVisited[expandPoint])
+			
+			System.out.println("BFS: graph expandng for point:" + expandPoint);
+			for(Integer adjPoint : graph.getAdjacentVertices(expandPoint))
 			{
-				isVisited[expandPoint] = true;
-				System.out.println("BFS: graph expandng for point:" + expandPoint);
-				for(Integer adjPoint : graph.getAdjacentVertices(expandPoint))
+				if(!isVisited[adjPoint])
 				{
-					if(!isVisited[adjPoint])
-					{
-						fromVertex[adjPoint] = expandPoint;
-						points.add(adjPoint);
-					}
+					points.add(adjPoint);
+					isVisited[adjPoint] = true;
+					fromVertex[adjPoint] = expandPoint;
 				}
 			}	
 		}

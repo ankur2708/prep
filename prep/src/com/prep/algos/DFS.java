@@ -33,23 +33,19 @@ public class DFS {
 	{
 		Stack<Integer> expandVertex = new Stack<Integer>();
 		expandVertex.push(startPoint);
-		Integer prevPoint = null;
+		isVisited[startPoint] = true;
 		
 		while(!expandVertex.isEmpty())
 		{
 			Integer expandPoint = expandVertex.pop();
-			if(!isVisited[expandPoint])
+			System.out.println("DFS: graph expandng for point:" + expandPoint);
+			for(Integer adjPoint : graph.getAdjacentVertices(expandPoint))
 			{
-				isVisited[expandPoint] = true;
-				fromVertex[expandPoint] = prevPoint;
-				prevPoint = expandPoint;
-				System.out.println("DFS: graph expandng for point:" + expandPoint);
-				for(Integer adjPoint : graph.getAdjacentVertices(expandPoint))
+				if(!isVisited[adjPoint])
 				{
-					if(!isVisited[adjPoint])
-					{
-						expandVertex.push(adjPoint);
-					}
+					expandVertex.push(adjPoint);
+					isVisited[adjPoint] = true;
+					fromVertex[adjPoint] = expandPoint; 
 				}
 			}
 		
